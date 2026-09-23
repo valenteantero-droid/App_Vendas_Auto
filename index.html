@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Loja de peças automotivas com compra online, retirada em loja ou entrega combinada." />
+  <title>AutoPrime Peças | Peças automotivas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Compra online com retirada em loja</span>
+      <span>Entrega disponível somente mediante combinação com a loja</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="AutoPrime Peças">
+        <div class="brand-mark">AP</div>
+        <div>
+          <strong id="storeNameHeader">AutoPrime Peças</strong>
+          <small>Peças automotivas</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="cart-button" id="openCartBtn" aria-label="Abrir carrinho">
+        <span>🛒</span>
+        <span>Carrinho</span>
+        <b id="cartCount">0</b>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Peças confiáveis para seu carro</span>
+          <h1>Compre online e retire na loja com praticidade.</h1>
+          <p>Encontre peças automotivas, adicione ao carrinho e finalize seu pedido. Pagamento à distância somente via Pix.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#produtos">Ver produtos</a>
+            <button class="btn btn-secondary" id="heroWhatsappBtn">Falar com a loja</button>
+          </div>
+          <div class="hero-badges">
+            <div><span>✓</span><p><strong>Retirada rápida</strong><br><small>Após confirmação do pagamento</small></p></div>
+            <div><span>✓</span><p><strong>Pix</strong><br><small>Pagamento à distância</small></p></div>
+            <div><span>✓</span><p><strong>Entrega combinada</strong><br><small>Consulte disponibilidade</small></p></div>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-panel-card">
+            <span class="tag">ATENDIMENTO PROFISSIONAL</span>
+            <h3>Não sabe qual peça comprar?</h3>
+            <p>Envie modelo, ano, motorização e, se possível, o chassi para confirmarmos a aplicação correta.</p>
+            <button class="link-button" id="compatibilityBtn">Consultar compatibilidade →</button>
+          </div>
+          <div class="metric-grid">
+            <div><strong>Pix</strong><span>Pagamento remoto</span></div>
+            <div><strong>Loja</strong><span>Retirada presencial</span></div>
+            <div><strong>Suporte</strong><span>Antes da compra</span></div>
+            <div><strong>Estoque</strong><span>Consulte disponibilidade</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="produtos">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Catálogo</span>
+            <h2>Peças em destaque</h2>
+          </div>
+          <p>Use a busca ou filtre por categoria.</p>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Buscar por peça, marca ou código..." />
+          </div>
+          <select id="categoryFilter" aria-label="Filtrar por categoria">
+            <option value="all">Todas as categorias</option>
+          </select>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state hidden" id="emptyState">Nenhum produto encontrado.</div>
+      </div>
+    </section>
+
+    <section class="steps" id="como-funciona">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <span class="eyebrow">Compra simples</span>
+            <h2>Como funciona</h2>
+          </div>
+        </div>
+        <div class="steps-grid">
+          <article><span>1</span><h3>Escolha as peças</h3><p>Pesquise, confira os detalhes e adicione os itens ao carrinho.</p></article>
+          <article><span>2</span><h3>Defina a retirada</h3><p>Retire na loja ou selecione entrega para combinar diretamente com a equipe.</p></article>
+          <article><span>3</span><h3>Pague via Pix</h3><p>Pedidos à distância são pagos somente por Pix. Aguarde a confirmação da loja.</p></article>
+          <article><span>4</span><h3>Receba a confirmação</h3><p>A loja confirma estoque, pagamento e disponibilidade para retirada ou entrega.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="notice-section">
+      <div class="container notice-card">
+        <div class="notice-icon">!</div>
+        <div>
+          <h3>Importante antes de pagar</h3>
+          <p>O pedido enviado pelo site funciona como uma solicitação. Aguarde a confirmação de estoque e aplicação da peça pela loja antes de efetuar o Pix quando orientado pela equipe.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <div class="brand-mark">AP</div>
+          <div><strong id="storeNameFooter">AutoPrime Peças</strong><small>Peças automotivas</small></div>
+        </div>
+        <p>Venda online com retirada na loja. Entrega somente mediante combinação prévia.</p>
+      </div>
+      <div>
+        <h4>Atendimento</h4>
+        <p id="storePhone">(21) 99999-9999</p>
+        <p id="storeHours">Seg a Sex: 08h às 18h • Sáb: 08h às 13h</p>
+      </div>
+      <div>
+        <h4>Endereço</h4>
+        <p id="storeAddress">Rua Exemplo, 123 - Centro</p>
+        <p>Retirada somente após confirmação.</p>
+      </div>
+      <div>
+        <h4>Pagamento</h4>
+        <p>À distância: Pix</p>
+        <p>Na loja: consulte as formas disponíveis.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="currentYear"></span> <span id="storeNameBottom">AutoPrime Peças</span>. Todos os direitos reservados.</div>
+  </footer>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div><span class="eyebrow">Seu pedido</span><h2>Carrinho</h2></div>
+      <button class="icon-btn" id="closeCartBtn" aria-label="Fechar carrinho">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">Seu carrinho está vazio.</div>
+    <div class="cart-footer">
+      <div class="total-row"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <button class="btn btn-primary full" id="checkoutBtn">Continuar pedido</button>
+    </div>
+  </aside>
+
+  <div class="modal-overlay" id="checkoutOverlay"></div>
+  <section class="checkout-modal" id="checkoutModal" aria-hidden="true">
+    <div class="drawer-header">
+      <div><span class="eyebrow">Finalização</span><h2>Dados do pedido</h2></div>
+      <button class="icon-btn" id="closeCheckoutBtn" aria-label="Fechar">×</button>
+    </div>
+
+    <form id="checkoutForm">
+      <div class="form-grid">
+        <label>Nome completo<input required id="customerName" type="text" placeholder="Seu nome" /></label>
+        <label>Telefone / WhatsApp<input required id="customerPhone" type="tel" placeholder="(00) 00000-0000" /></label>
+        <label class="span-2">Veículo e ano<input id="customerVehicle" type="text" placeholder="Ex.: Gol 1.6 2018" /></label>
+      </div>
+
+      <div class="checkout-block">
+        <h3>Forma de recebimento</h3>
+        <div class="choice-grid">
+          <label class="choice-card"><input type="radio" name="delivery" value="Retirada na loja" checked /><span><strong>Retirada na loja</strong><small>Sem frete. Aguarde a confirmação.</small></span></label>
+          <label class="choice-card"><input type="radio" name="delivery" value="Entrega a combinar" /><span><strong>Entrega a combinar</strong><small>Prazo e valor combinados com a loja.</small></span></label>
+        </div>
+        <div class="delivery-note hidden" id="deliveryNote">A entrega não é calculada pelo site. A loja entrará em contato para informar disponibilidade, prazo e valor.</div>
+      </div>
+
+      <div class="checkout-block pix-block">
+        <h3>Pagamento à distância</h3>
+        <div class="pix-card">
+          <div class="pix-symbol">PIX</div>
+          <div><strong>Somente Pix</strong><p>Chave: <span id="pixKey">pix@autoprime.com.br</span></p></div>
+          <button type="button" class="btn btn-secondary small" id="copyPixBtn">Copiar chave</button>
+        </div>
+        <p class="muted">Efetue o pagamento somente após a loja confirmar o estoque e orientar a finalização.</p>
+      </div>
+
+      <div class="checkout-summary">
+        <h3>Resumo</h3>
+        <div id="checkoutItems"></div>
+        <div class="total-row"><span>Total dos produtos</span><strong id="checkoutTotal">R$ 0,00</strong></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary full">Enviar pedido pelo WhatsApp</button>
+      <p class="form-help">Ao enviar, uma mensagem pronta será aberta no WhatsApp da loja com seus dados e itens do pedido.</p>
+    </form>
+  </section>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
